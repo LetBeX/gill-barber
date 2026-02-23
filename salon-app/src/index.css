@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #1C1C1C;
+    background-color: #F5F0E8;
+    @apply font-sans;
+  }
+}
+
+/* Custom Utilities based on Design */
+@layer components {
+
+  /* Material Symbols Helper */
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .material-symbols-outlined.fill-1 {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Masonry Grid for Gallery */
+  .masonry-grid {
+    columns: 1;
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      columns: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      columns: 3;
+    }
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Form Inputs */
+  .form-input {
+    @apply w-full rounded-lg p-3 outline-none transition-all focus:ring-1;
+    border: 1px solid #d4c6a8;
+    background-color: #F5F0E8;
+    --tw-ring-color: #C0392B;
+  }
+
+  .form-input:focus {
+    border-color: #C0392B;
+  }
+
+  .dark .form-input {
+    border-color: #3a3020;
+    background-color: #1E1E1E;
+  }
+
+  /* Sticky Header Blur */
+  .sticky-nav {
+    @apply sticky top-0 z-50 backdrop-blur-md;
+    background-color: rgba(255, 255, 255, 0.80);
+    border-bottom: 1px solid #e8dfc8;
+  }
+
+  .dark .sticky-nav {
+    background-color: rgba(17, 17, 17, 0.90);
+    border-bottom-color: #2a2010;
+  }
+}
+
+/* Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
