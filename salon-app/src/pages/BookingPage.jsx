@@ -404,38 +404,7 @@ const BookingPage = () => {
             </div>
 
 
-            {/* Verification Section: Recent Bookings */}
-            {bookingsList.length > 0 && (
-                <div className="mt-16 border-t border-[#e8dfc8] dark:border-[#2a2010] pt-12">
-                    <h2 className="text-2xl font-black mb-6 dark:text-white">Recent Bookings (In-Memory Verification)</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {bookingsList.map((booking) => (
-                            <div key={booking.id} className="bg-white dark:bg-[#181510] p-6 rounded-xl border border-[#e8dfc8] dark:border-[#2a2010] shadow-sm">
-                                <div className="flex justify-between items-start mb-4">
-                                    <h3 className="font-bold text-lg dark:text-white">{booking.name}</h3>
-                                    <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">{booking.status}</span>
-                                </div>
-                                <div className="space-y-2 text-sm text-muted dark:text-[#b8a878]">
-                                    <p className="flex items-center gap-2">
-                                        <span className="material-symbols-outlined text-base">calendar_month</span>
-                                        {booking.date} at {booking.time}
-                                    </p>
-                                    <p className="flex items-center gap-2">
-                                        <span className="material-symbols-outlined text-base">content_cut</span>
-                                        {booking.service}
-                                    </p>
-                                    {booking.phone && (
-                                        <p className="flex items-center gap-2">
-                                            <span className="material-symbols-outlined text-base">phone</span>
-                                            {booking.phone}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
+
         </div>
     );
 };
