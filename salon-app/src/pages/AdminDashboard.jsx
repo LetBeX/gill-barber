@@ -32,7 +32,7 @@ const AdminDashboard = () => {
 
     const fetchBookings = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/admin/bookings');
+            const res = await fetch('https://gill-barber.onrender.com/api/admin/bookings');
             const data = await res.json();
             setBookings(data);
         } catch (err) {
@@ -45,7 +45,7 @@ const AdminDashboard = () => {
         setProfileMessage({ text: '', type: '' });
 
         try {
-            const res = await fetch('http://localhost:5000/api/admin/credentials', {
+            const res = await fetch('https://gill-barber.onrender.com/api/admin/credentials', {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ currentId, currentPassword, newId, newPassword })

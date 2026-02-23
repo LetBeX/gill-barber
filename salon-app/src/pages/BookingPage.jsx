@@ -105,7 +105,7 @@ const BookingPage = () => {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/admin/bookings');
+                const res = await fetch('https://gill-barber.onrender.com/api/admin/bookings');
                 const data = await res.json();
                 if (Array.isArray(data)) {
                     setBookingsList(data);
@@ -136,7 +136,7 @@ const BookingPage = () => {
         };
 
         try {
-            const res = await fetch('http://localhost:5000/api/bookings', {
+            const res = await fetch('https://gill-barber.onrender.com/api/bookings', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingPayload)
