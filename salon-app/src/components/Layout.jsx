@@ -93,14 +93,8 @@ const Layout = () => {
                             <h2 className="text-white text-lg font-black tracking-tighter uppercase">GILL BARBER</h2>
                         </div>
                         <p className="text-sm text-[#b8a878] mb-6">
-                            Join our crew for exclusive offers and barbering tips.
+                            Experience premium barbering and grooming services tailored for the modern man.
                         </p>
-                        <div className="flex">
-                            <input className="bg-[#252015] border-none rounded-l-lg px-4 py-2 text-sm w-full text-white focus:ring-1 focus:ring-primary outline-none placeholder:text-[#8a7a65]" placeholder="Your email" type="email"/>
-                            <button className="bg-[#C0392B] text-white px-4 py-2 rounded-r-lg hover:bg-[#992d22] transition">
-                                <span className="material-symbols-outlined text-sm">send</span>
-                            </button>
-                        </div>
                     </div>
                     {/* Quick Links */}
                     <div>
