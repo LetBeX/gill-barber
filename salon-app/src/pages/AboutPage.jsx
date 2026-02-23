@@ -8,12 +8,12 @@ const AboutPage = () => {
         <div className="w-full">
             {/* Hero Section: Our Heritage */}
             <section className="relative px-6 md:px-20 lg:px-40 py-16 md:py-24">
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent" />
-                <div className="absolute bottom-10 left-10">
-                    <h1 className="text-5xl font-black text-white">About Us</h1>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent pointer-events-none" />
+                <div className="relative mb-16 z-10">
+                    <h1 className="text-5xl font-black text-charcoal dark:text-white">About Us</h1>
                     <div className="w-20 h-1.5 bg-[#C0392B] mt-4"></div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                     <div className="order-2 lg:order-1 flex flex-col gap-8">
                         <div className="space-y-4">
                             <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Our Heritage</span>
